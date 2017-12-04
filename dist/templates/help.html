@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ITTAC作业系统微信端</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description"
+        content="Site for ITTAC(www.ittac.org)'s assignment system mobile terminal based on jquery-weui">
+  <link rel="stylesheet" href="../lib/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="css/ihmMobileRoot.css">
+  <link rel="apple-touch-icon" href="./images/ittac-logo-72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/ittac-logo-72.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/ittac-logo-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/ittac-logo-152.png">
+  <link rel="shortcut icon" href="./images/ittac-logo-72.png">
+</head>
+<body ontouchstart>
+<header class='bulletinHeader'>
+  <div style="text-align: center">
+    <img src="images/ittac-logo-152-transparent.png">
+  </div>
+  <h1 class="bulletinTitle" style="text-align: center">ITTAC作业系统微信端</h1>
+  
+  <div class="weui-flex">
+    <div class="weui-flex__item">
+      <p class='bulletinContent' style="text-align: right">前台版本：</p>
+    </div>
+    <div class="weui-flex__item">
+      <div class="placeholder">
+        <p class='bulletinContent' style="text-align: left" id="frontendVersion"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="weui-flex">
+    <div class="weui-flex__item">
+      <p class='bulletinContent' style="text-align: right">后台版本：</p>
+    </div>
+    <div class="weui-flex__item">
+      <div class="placeholder">
+        <p class='bulletinContent' style="text-align: left" id="backendVersion"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="weui-flex">
+    <div class="weui-flex__item">
+      <p class='bulletinContent' style="text-align: right">后台地址：</p>
+    </div>
+    <div class="weui-flex__item">
+      <div class="placeholder">
+        <p class='bulletinContent' style="text-align: left" id="backendUrl"></p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="weui-cells">
+  <a class="weui-cell weui-cell_access" href="version/list.html">
+    <div class="weui-cell__bd">
+      <p>功能介绍</p>
+    </div>
+  </a>
+</div>
+<div class="weui-footer weui-footer_fixed-bottom">
+  <p class="weui-footer__links">
+    <a id="portalUrl" href="#" class="weui-footer__link">门户</a>
+    <a id="ihmPclUrl" href="#" class="weui-footer__link">作业系统PC端</a>
+  </p>
+  <p class="weui-footer__text">Copyright © 2013-2017 ITTAC</p>
+</div>
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script src="../js/jquery-weui.js"></script>
+<script src="../js/ihmMobileConfig.js"></script>
+<script src="../js/ihmMobileHelp.js"></script>
+</body>
+</html>

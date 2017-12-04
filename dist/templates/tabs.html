@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ITTAC作业系统微信端</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description"
+        content="Site for ITTAC(www.ittac.org)'s assignment system mobile terminal based on jquery-weui">
+  <link rel="stylesheet" href="../lib/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="css/ihmMobileRoot.css">
+  <link rel="apple-touch-icon" href="./images/ittac-logo-72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/ittac-logo-72.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/ittac-logo-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/ittac-logo-152.png">
+  <link rel="shortcut icon" href="./images/ittac-logo-72.png">
+</head>
+
+<body ontouchstart>
+<!--<div id="backendUrl" style="display: none">ihm.ittac.org</div>-->
+<div class="weui-tab">
+  <div class="weui-tab__bd">
+    <div id="todayAssignmentTab"  class="weui-tab__bd-item weui-tab__bd-item--active">
+      <header class='bulletinHeader'>
+        <h1 class="bulletinTitle"></h1>
+        <p class='bulletinContent'></p>
+      </header>
+      <div class="page__bd">
+        <div class="weui-panel" id="todayAssignmentInfoListPanelFatherElement">
+        </div>
+      </div>
+    </div>
+    <div id="weekAssignmentTab" class="weui-tab__bd-item">
+      <header class='bulletinHeader'>
+        <h1 class="bulletinTitle"></h1>
+        <p class='bulletinContent'></p>
+      </header>
+      <div class="page__bd">
+        <div class="weui-panel" id="weekAssignmentInfoListPanelFatherElement">
+        </div>
+      </div>
+    </div>
+    <div id="analysisTab" class="weui-tab__bd-item">
+      <div class="page__bd">
+        <header class='bulletinHeader'>
+          <h1 class="bulletinTitle"></h1>
+          <p class='bulletinContent'></p>
+        </header>
+        <div style="text-align:center;">
+          <div class="page__bd">
+            <div class="weui-panel weui-panel_access">
+          
+              <div class="weui-panel__bd">
+                <a href="javascript:void(0);"
+                   class="weui-media-box weui-media-box_appmsg weui-cell_access js_item"
+                   data-id="assignment-uploader">
+                  <div class="weui-media-box__bd">
+                
+                    <div class="weui-media-box__desc">
+                      <div id="task-analysis-pie-chart"
+                           style="margin:0 auto;width: 350px;height:300px;"></div>
+                    </div>
+                    <ul class="weui-media-box__info">
+                      <li class="weui-media-box__info__meta currentTime"></li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="weui-panel weui-panel_access">
+          
+              <div class="weui-panel__bd">
+                <a href="javascript:void(0);"
+                   class="weui-media-box weui-media-box_appmsg weui-cell_access js_item"
+                   data-id="assignment-uploader">
+                  <div class="weui-media-box__bd">
+                
+                    <div class="weui-media-box__desc">
+                      <div id="task-analysis-line-chart"
+                           style="margin:0 auto;width: 350px;height:300px;"></div>
+                    </div>
+                    <ul class="weui-media-box__info">
+                      <li class="weui-media-box__info__meta currentTime"></li>
+                    </ul>
+                    <br>
+                    <br>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="weui-tabbar">
+    <a href="#todayAssignmentTab" id="todayAssignmentTabButton" class="weui-tabbar__item weui-bar__item--on">
+      <div class="weui-tabbar__icon" id="todayAssignmentIcon">
+        <img src="./images/icon-today.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">今日作业</p>
+    </a>
+    <a href="#weekAssignmentTab" id="weekAssignmentTabButton" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon" id="weekAssignmentIcon">
+        <img src="./images/icon-week.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">本周剩余作业</p>
+    </a>
+    <a href="#analysisTab" id="analysisTabButton" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <img src="./images/icon-analysis.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">统计</p>
+    </a>
+  </div>
+</div>
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script src="../js/jquery-weui.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/ihmMobileConfig.js"></script>
+<script src="../js/ihmMobileRoot.js"></script>
+<script src="../js/ihmMobileTabs.js"></script>
+</body>
+</html>

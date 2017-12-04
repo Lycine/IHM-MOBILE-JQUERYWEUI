@@ -1,0 +1,44 @@
+body, html {
+  height: 100%;
+  background: #FAFAFA;
+  -webkit-tap-highlight-color: transparent;
+}
+.bulletinTitle {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.bulletinContent {
+  margin-top: 5px;
+  color: #888888;
+  text-align: left;
+  font-size: 14px;
+}
+
+.bulletinHeader {
+  padding: 35px;
+}
+
+.ams-content-padded {
+  padding: 15px;
+}
+
+.ams-second-title {
+  text-align: center;
+  font-size: 24px;
+  color: #199ADE;
+  font-weight: 400;
+  margin: 0 15%;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+}

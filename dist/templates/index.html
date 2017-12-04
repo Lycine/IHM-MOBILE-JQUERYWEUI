@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ITTAC作业系统微信端</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description"
+        content="Site for ITTAC(www.ittac.org)'s assignment system mobile terminal based on jquery-weui">
+  <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+  <meta name="apple-mobile-web-app-title" content="ITTAC">
+  <link rel="stylesheet" href="../lib/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="css/ihmMobileRoot.css">
+  <link rel="apple-touch-icon" href="./images/ittac-logo-72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/ittac-logo-72.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/ittac-logo-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/ittac-logo-152.png">
+  <link rel="shortcut icon" href="./images/ittac-logo-72.png">
+</head>
+<body ontouchstart>
+<!--<div id="backendUrl" style="display: none">ihm.ittac.org</div>-->
+<div style="text-align: center">
+  <img src="images/ittac-logo-152-transparent.png">
+</div>
+<header class='bulletinHeader' style="padding: 0px">
+  <h1 class="bulletinTitle" style="text-align: center">ITTAC作业系统微信端</h1>
+</header>
+<div class="page__bd">
+  <div class="weui-cells__title">登录</div>
+  <div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">邮箱</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" id="email" type="email" placeholder="请输入邮箱号"/>
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" id="password" type="password" placeholder="请输入密码号"/>
+      </div>
+    </div>
+  </div>
+  <div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" href="javascript:" onclick="signIn()">确定</a>
+  </div>
+</div>
+</div>
+<div class="weui-footer weui-footer_fixed-bottom">
+  <p class="weui-footer__links">
+    <a href="http://www.ittac.org" class="weui-footer__link">门户</a>
+    <a href="help.html" class="weui-footer__link">关于</a>
+  </p>
+  <p class="weui-footer__text">Copyright © 2013-2017 ITTAC</p>
+</div>
+<script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script src="../js/jquery-weui.js"></script>
+<script src="../js/ihmMobileConfig.js"></script>
+<script src="../js/ihmMobileRoot.js"></script>
+<script src="../js/ihmMobileIndex.js"></script>
+</body>
+</html>
