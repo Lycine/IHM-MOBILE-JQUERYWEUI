@@ -28,7 +28,6 @@ $(function () {
         {text: "否", className: "default"},
         {
           text: "是", onClick: function () {
-            signIn()
             skipToTabs();
           }
         },

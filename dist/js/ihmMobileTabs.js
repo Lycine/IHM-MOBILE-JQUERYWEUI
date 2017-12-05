@@ -86,7 +86,7 @@ function loadTodayAssignmentInfoList() {
               + '</b> </li> </ul> </div> </a>'
           $('#todayAssignmentInfoListPanel').append(item);
         });
-        $('#todayAssignmentInfoListPanel').append('<div style="widt:100%;height:53px;background:#FAFAFA;"></div>')
+        $('#todayAssignmentInfoListPanelFatherElement').after('<div style="width:100%;height:53px;background:#FAFAFA;border-style: solid;border-color: #FAFAFA"></div>')
         if (0 != parseInt(undoCount)) {
           $('#todayAssignmentIcon').before('<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;" id="weekAssignmentTabButtonBadge">' + undoCount + '</span>');
         }
@@ -144,7 +144,7 @@ function loadWeekAssignmentInfoList() {
           $('#weekAssignmentInfoListPanel').append(item);
         });
         var undoCount = data['data'].length;
-        $('#weekAssignmentInfoListPanel').append('<div style="widt:100%;height:53px;background:#FAFAFA;"></div>')
+        $('#weekAssignmentInfoListPanelFatherElement').after('<div style="width:100%;height:53px;background:#FAFAFA;border-style: solid;border-color: #FAFAFA;"></div>')
         if (0 != parseInt(undoCount)) {
           $('#weekAssignmentIcon').before('<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;" id="weekAssignmentTabButtonBadge">' + undoCount + '</span>');
         }
@@ -396,7 +396,7 @@ function skipToDetail(c_name, value, expiredays) {
 }
 
 $(function () {
-  if (checkSignInStatus()){
+  if (checkSignInStatus()) {
     loadBulletin();
     loadTodayAssignmentInfoList();
     loadWeekAssignmentInfoList()

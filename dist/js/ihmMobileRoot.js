@@ -36,25 +36,23 @@ function signIn() {
     },
     success: function (data) {
       if ("0" == data['status']) {
+        $.hideLoading();
         setCookie('uid', data['uid'], 7200);
         skipToTabs();
-        $.hideLoading();
       } else {
         $.hideLoading();
-        $.toptip(data['info'], 'error');
+        $.toptip(data['info']);
+        // $.toast(data['info'], "cancel", function (toast) {});
       }
     },
     error: function () {
-      $.toast("登录失败", "cancel", function (toast) {
-        $.hideLoading();
-      });
+      $.toast("登录失败", "cancel", function (toast) {});
     }
   });
 }
 
 function checkSignInStatus() {
   if ("" == getCookie('uid')) {
-    signIn()
     $.modal({
       title: "未登录",
       text: "",
