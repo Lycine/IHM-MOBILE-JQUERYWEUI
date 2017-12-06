@@ -91,7 +91,11 @@ function loadTodayAssignmentInfoList() {
           $('#todayAssignmentIcon').before('<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;" id="weekAssignmentTabButtonBadge">' + undoCount + '</span>');
         }
       } else {
-        $.toast(data['info'], function () {
+        $.modal({
+          text: '今日作业: ' + data['info'],
+          buttons: [
+            {text: "知道了", className: "default"},
+          ]
         });
       }
     },
@@ -149,7 +153,11 @@ function loadWeekAssignmentInfoList() {
           $('#weekAssignmentIcon').before('<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;" id="weekAssignmentTabButtonBadge">' + undoCount + '</span>');
         }
       } else {
-        $.toast(data['info'], function () {
+        $.modal({
+          text: '本周剩余作业: ' + data['info'],
+          buttons: [
+            {text: "知道了", className: "default"},
+          ]
         });
       }
     },
@@ -169,14 +177,37 @@ function loadChart() {
       trigger: 'item',
       formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
+    legend: {
+      x: 'left',
+      data: ['待完成', '已提交，按时交', '未完成', '糊弄，按时交', '合格，按时交', '已提交，迟交', '糊弄，迟交', '合格，迟交']
+    },
     color: ['#3399ff', '#999999', '#ff0000', '#996600', '#66cc00', '#111111', '#663300', '#663300', '#336633'],
-    series: [
+    series : [
       {
         name: '访问来源',
         type: 'pie',
-        radius: '55%',
-        center: ['50%', '60%'],
-        data: [],
+        radius: ['50%', '65%'],
+        avoidLabelOverlap: false,
+        label: {
+          normal: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            show: false,
+            textStyle: {
+              fontSize: '30',
+              fontWeight: 'bold'
+            }
+          }
+        },
+        labelLine: {
+          normal: {
+            show: false
+          }
+        },
+        data:[
+        ],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
@@ -210,13 +241,31 @@ function loadChart() {
     },
     success: function (data) {
       myChart1.setOption({
-        series: [
+        series : [
           {
             name: '访问来源',
             type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: data,
+            radius: ['50%', '65%'],
+            avoidLabelOverlap: false,
+            label: {
+              normal: {
+                show: false,
+                position: 'center'
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  fontSize: '18',
+                  fontWeight: 'bold'
+                }
+              }
+            },
+            labelLine: {
+              normal: {
+                show: false
+              }
+            },
+            data:data,
             itemStyle: {
               emphasis: {
                 shadowBlur: 10,

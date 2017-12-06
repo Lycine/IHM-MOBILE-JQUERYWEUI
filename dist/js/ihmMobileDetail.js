@@ -23,12 +23,17 @@ function getTaskDetail() {
         $('#remark').empty();
         $('#taskStatus').empty();
         $('#deadLineString').empty();
-
+        $('#taskId').empty();
+        $('#x-amz-meta-task-name').empty();
+        $('#x-amz-meta-user-name').empty();
         $.each(data['data'], function (i, result) {
           $('#taskName').text(result['taskName']);
           $('#remark').text(result['remark']);
           $('#taskStatus').text(result['taskStatus']);
           $('#deadLineString').text(result['deadLineString']);
+          $('#taskId').text(result['id']);
+          $('#x-amz-meta-task-name').val(result['taskName']);
+          $('#x-amz-meta-user-name').val(result['stuName']);
         });
       } else {
         $.alert(data['info'], "");
@@ -39,6 +44,43 @@ function getTaskDetail() {
       });
     }
   });
+}
+
+function submitUploadForm() {
+  if ("" == $('#uploaderInput').val()) {
+    $.toast("请上传图片", "cancel", function (toast) {
+    });
+  } else {
+    var encodeUrl = window.btoa(document.referrer);
+    if ("" == encodeUrl) {
+      encodeUrl = '#';
+    }
+    console.log(document.referrer);
+    console.log('encodeUrl: ' + encodeUrl);
+
+    //suffix
+    var uploaderSuffix = '.' + $('#uploaderInput').val().split(".").pop();
+    //key
+    $("#x-amz-meta-task-name").val(
+        $("#taskName").text() +
+        '__' +
+        $("#x-amz-meta-user-name").val());
+    $("#formKey").val(
+        $("#x-amz-meta-task-name").val() +
+        uploaderSuffix
+    );
+    //重定向链接
+    $('#success_action_redirect').val(
+        'http://' + backendUrl + '/wechat/taskUploadSuccess/' +
+        $('#taskId').text() +
+        '/' +
+        $('#uploaderInput').val().split(".").pop() +
+        '/?encodeUrl=' +
+        encodeUrl
+    )
+    ;
+    $('#updateTaskForm').submit();
+  }
 }
 
 $(function () {
@@ -77,5 +119,11 @@ $(function () {
     $gallery.on("click", function () {
       $gallery.fadeOut(100);
     });
+
+    $('#showTooltips').on('click', function () {
+      $('#showTooltips').unbind("click");
+      submitUploadForm();
+    });
+
   }
 });

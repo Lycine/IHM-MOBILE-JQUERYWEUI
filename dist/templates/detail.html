@@ -30,32 +30,48 @@
       <!--</div>-->
       <!--</div>-->
       <!--<div class="weui-cell">-->
-        <!--<div class="weui-cell__hd"><label class="weui-label">详情</label></div>-->
-        <!--<div class="weui-cell__bd">-->
-          <!--<div class="weui-input" id="remark">-->
-          <!---->
-          <!--</div>-->
-        <!--</div>-->
+      <!--<div class="weui-cell__hd"><label class="weui-label">详情</label></div>-->
+      <!--<div class="weui-cell__bd">-->
+      <!--<div class="weui-input" id="remark">-->
+      <!---->
+      <!--</div>-->
+      <!--</div>-->
       <!--</div>-->
       <!--<div class="weui-cell">-->
-        <!--<div class="weui-cell__hd"><label class="weui-label">状态</label></div>-->
-        <!--<div class="weui-cell__bd">-->
-          <!--<div class="weui-input" id="taskStatus">-->
-          <!---->
-          <!--</div>-->
-        <!--</div>-->
+      <!--<div class="weui-cell__hd"><label class="weui-label">状态</label></div>-->
+      <!--<div class="weui-cell__bd">-->
+      <!--<div class="weui-input" id="taskStatus">-->
+      <!---->
+      <!--</div>-->
+      <!--</div>-->
       <!--</div>-->
       <!--<div class="weui-cell">-->
-        <!--<div class="weui-cell__hd"><label class="weui-label">截止日期</label></div>-->
-        <!--<div class="weui-cell__bd">-->
-          <!--<div class="weui-input" id="deadLineString">-->
-          <!---->
-          <!--</div>-->
-        <!--</div>-->
+      <!--<div class="weui-cell__hd"><label class="weui-label">截止日期</label></div>-->
+      <!--<div class="weui-cell__bd">-->
+      <!--<div class="weui-input" id="deadLineString">-->
+      <!---->
+      <!--</div>-->
+      <!--</div>-->
       <!--</div>-->
       
       <div class="weui-cell">
         <div class="weui-form-preview__bd">
+          <div class="weui-form-preview__item" style="display: none">
+            <label class="weui-form-preview__label">作业编号</label>
+            <span class="weui-form-preview__value" id="taskId"></span>
+          </div>
+  
+          <div class="weui-form-preview__item" style="display: none">
+            <label class="weui-form-preview__label">x-amz-meta-task-name</label>
+            <input type="hidden" name="x-amz-meta-task-name" id="x-amz-meta-task-name"/>
+          </div>
+  
+          <div class="weui-form-preview__item" style="display: none">
+            <label class="weui-form-preview__label">x-amz-meta-user-name</label>
+            <input type="hidden" name="x-amz-meta-user-name" id="x-amz-meta-user-name"/>
+          </div>
+          
+          
           <div class="weui-form-preview__item">
             <label class="weui-form-preview__label">作业名称</label>
             <span class="weui-form-preview__value" id="taskName"></span>
@@ -85,10 +101,16 @@
             </div>
             <div class="weui-uploader__bd">
               <ul class="weui-uploader__files" id="uploaderFiles">
-              
               </ul>
               <div class="weui-uploader__input-box">
-                <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple/>
+                <form id="updateTaskForm" action="http://ittac-homework-management.sinacloud.net" method="post"
+                      enctype="multipart/form-data">
+                  <input name="AWSAccessKeyId" type="text" value="18qu7z8JTVZPurFMQ90i" style="display: none">
+                  <input id="success_action_redirect" name="success_action_redirect" value="" style="display: none" type="text">
+                  <input id="formKey" name="key" type="text" value="20171205/Chooseabc20171205" style="display: none">
+                  <input id="uploaderInput" class="weui-uploader__input" type="file" name="file" accept="image/*"
+                         multiple/>
+                </form>
               </div>
             </div>
           </div>
@@ -97,9 +119,12 @@
     </div>
     
     <div class="weui-btn-area">
-      <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">提交</a>
+      <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips" >提交</a>
     </div>
   </div>
+</div>
+<div style="display: none">
+
 </div>
 <script src="../lib/jquery-2.1.4.js"></script>
 <script src="../lib/fastclick.js"></script>

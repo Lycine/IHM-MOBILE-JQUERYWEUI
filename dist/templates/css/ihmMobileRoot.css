@@ -32,6 +32,10 @@ body, html {
   margin: 0 15%;
 }
 
+.weui-btn_primary:active{
+  background-color: #0d73b6 !important;
+}
+
 footer {
   text-align: center;
   font-size: 14px;

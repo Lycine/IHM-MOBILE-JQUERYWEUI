@@ -100,7 +100,7 @@ a{
 }
 .weui-icon-success{
   font-size:23px;
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-icon-waiting{
   font-size:23px;
@@ -116,11 +116,11 @@ a{
 }
 .weui-icon-success-circle{
   font-size:23px;
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-icon-success-no-circle{
   font-size:23px;
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-icon-waiting-circle{
   font-size:23px;
@@ -132,14 +132,14 @@ a{
 }
 .weui-icon-download{
   font-size:23px;
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-icon-info-circle{
   font-size:23px;
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-icon-safe-success{
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-icon-safe-warn{
   color:#FFBE00;
@@ -226,7 +226,7 @@ a{
 }
 .weui-btn_primary:not(.weui-btn_disabled):active{
   color:rgba(255, 255, 255, 0.6);
-  background-color:#179B16;
+  background-color:#007aff;
 }
 .weui-btn_warn{
   background-color:#E64340;
@@ -246,7 +246,7 @@ a{
   background-color:#F7F7F7;
 }
 .weui-btn_disabled.weui-btn_primary{
-  background-color:#9ED99D;
+  background-color:#2990ff;
 }
 .weui-btn_disabled.weui-btn_warn{
   background-color:#EC8B89;
@@ -259,7 +259,7 @@ a{
   color:rgba(255, 255, 255, 0.6);
 }
 .weui-btn_loading.weui-btn_primary{
-  background-color:#179B16;
+  background-color:#007aff;
 }
 .weui-btn_loading.weui-btn_warn{
   background-color:#CE3C39;
@@ -269,8 +269,8 @@ a{
   border:1px solid #0F7FCC;
 }
 .weui-btn_plain-primary:not(.weui-btn_plain-disabled):active{
-  color:rgba(26, 173, 25, 0.6);
-  border-color:rgba(26, 173, 25, 0.6);
+  color:#0F7FCC;
+  border-color:#0F7FCC;
 }
 .weui-btn_plain-primary:after{
   border-width:0;
@@ -280,8 +280,8 @@ a{
   border:1px solid #353535;
 }
 .weui-btn_plain-default:not(.weui-btn_plain-disabled):active{
-  color:rgba(53, 53, 53, 0.6);
-  border-color:rgba(53, 53, 53, 0.6);
+  color:#0F7FCC;
+  border-color:#0F7FCC;
 }
 .weui-btn_plain-default:after{
   border-width:0;
@@ -527,7 +527,7 @@ input.weui-btn_plain-default{
 .weui-cells_radio .weui-check:checked + .weui-icon-checked:before{
   display:block;
   content:'\EA08';
-  color:#09BB07;
+  color:#007aff;
   font-size:16px;
 }
 .weui-cells_checkbox .weui-cell__hd{
@@ -541,7 +541,7 @@ input.weui-btn_plain-default{
 }
 .weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before{
   content:'\EA06';
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-label{
   display:block;
@@ -761,7 +761,7 @@ button.weui-form-preview__btn{
   color:#999999;
 }
 .weui-form-preview__btn_primary{
-  color:#0BB20C;
+  color:#007aff;
 }
 .weui-cell_select{
   padding:0;
@@ -881,7 +881,7 @@ button.weui-vcode-btn{
   outline:0;
 }
 .weui-vcode-btn:active{
-  color:#52a341;
+  color:#007aff;
 }
 .weui-gallery{
   display:none;
@@ -1205,7 +1205,7 @@ button.weui-vcode-btn{
 .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,
 .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon > i,
 .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{
-  color:#09BB07;
+  color:#007aff;
 }
 .weui-tabbar__icon{
   display:inline-block;
@@ -1321,7 +1321,7 @@ i.weui-tabbar__icon,
 .weui-progress__inner-bar{
   width:0;
   height:100%;
-  background-color:#09BB07;
+  background-color:#007aff;
 }
 .weui-progress__opr{
   display:block;
@@ -1731,7 +1731,7 @@ a.weui-media-box:active{
   color:#353535;
 }
 .weui-dialog__btn_primary{
-  color:#0BB20C;
+  color:#007aff;
 }
 .weui-skin_android .weui-dialog{
   text-align:left;
@@ -2144,7 +2144,7 @@ a.weui-media-box:active{
   display:none;
   margin-left:10px;
   line-height:28px;
-  color:#09BB07;
+  color:#007aff;
   white-space:nowrap;
 }
 .weui-search-bar__input:not(:valid) ~ .weui-icon-clear{
@@ -2421,7 +2421,7 @@ input[type="search"]::-webkit-search-results-decoration{
   vertical-align:middle;
   text-decoration:inherit;
   content:"\EA08";
-  color:#09BB07;
+  color:#007aff;
   font-size:13px;
   position:absolute;
   top:50%;
