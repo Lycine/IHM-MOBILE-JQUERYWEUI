@@ -243,7 +243,7 @@ function loadChart() {
       myChart1.setOption({
         series : [
           {
-            name: '访问来源',
+            name: '作业完成情况',
             type: 'pie',
             radius: ['50%', '65%'],
             avoidLabelOverlap: false,
