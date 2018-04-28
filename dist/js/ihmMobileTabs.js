@@ -110,7 +110,7 @@ function loadWeekAssignmentInfoList() {
   var url = "http://" + backendUrl + "/wechat/remainingTaskList";
   var fd = new FormData();
   fd.append("uid", getCookie('uid'));
-  fd.append("offset", "7");
+  fd.append("offset", "6");
   $.ajax({
     type: "POST",
     url: url,
